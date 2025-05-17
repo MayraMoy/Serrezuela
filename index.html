@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Serrezuela es Turismo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Encabezado y navegación -->
+<header>
+    <div class="container">
+        <h1>Serrezuela es Turismo</h1>
+    </div>
+</header>
+    <nav class="navbar">
+        <a href="#atractivos">Atractivos</a>
+        <a href="#cultura">Cultura</a>
+        <a href="#gastronomia">Gastronomía</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#alojamiento">Alojamiento</a>
+        <a href="#contacto">Contacto</a>
+        </ul>
+    </nav>
+
+<div id="modal" class="modal" onclick="cerrarModal()">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="img-ampliada">
+</div>
+
+<!-- Hero -->
+<section id="hero" class="hero">
+    <div class="hero-text">
+        <h2>Descubrí la magia del norte cordobés</h2>
+        <p>Naturaleza, cultura y tradición en un solo lugar</p>
+        <a href="#atractivos" class="btn">Explorar</a>
+    </div>
+</section>
+
+<!-- Secciones -->
+<section id="atractivos" class="section">
+    <h2>Atractivos Naturales</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="img/termas.webp" alt="Termas del Quicho" onclick="mostrarModal(this)"/>
+            <h3>Termas del Quicho</h3>
+            <p>Relajate en aguas termales con vistas serranas..</p>
+        </div>
+        <div class="card">
+            <img src="img/reino-fio.webp" alt="Senderos" onclick="mostrarModal(this)"/>
+            <h3>Reino de Fio</h3>
+            <p>Un lugar ideal para disfrutar la naturaleza con actividades al aire libre.</p>
+        </div>
+        <div class="card">
+            <img src="img/Parque-pina.webp" alt="Balnearios" onclick="mostrarModal(this)"/>
+            <h3>Parque Nacional Estancia Pinas</h3>
+            <p>Un área conserva el Chaco Seco Serrano y su biodiversidad.</p>
+        </div>
+    </div>
+</section>
+
+<section id="cultura" class="section light">
+    <h2>Cultura y Tradiciones</h2>
+    <p>Fiestas populares, leyendas y expresiones artísticas que mantienen viva nuestra identidad.</p>
+</section>
+
+<section id="gastronomia" class="section">
+    <h2>Gastronomía Local</h2>
+    <p>Disfrutá de sabores auténticos como el locro, empanadas y dulces regionales.</p>
+</section>
+
+<section id="eventos" class="section light">
+    <h2>Eventos Destacados</h2>
+    <p>Agenda cultural y celebraciones para vivir Serrezuela todo el año.</p>
+</section>
+
+<section id="alojamiento" class="section">
+    <h2>¿Dónde Alojarse?</h2>
+    <p>Cabañas, hospedajes familiares y opciones de turismo rural.</p>
+</section>
+
+<section id="contacto" class="section light">
+    <h2>Contacto</h2>
+    <form class="contact-form" action="https://formspree.io/f/xblowwzk" method="POST">
+        <input type="text" name="name" placeholder="Nombre" required />
+        <input type="email" name="email" placeholder="Correo electrónico" required />
+        <textarea name="message" placeholder="Mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<!-- Pie de página -->
+<footer>
+    <p>&copy; 2025 Serrezuela es Turismo | Municipalidad de Serrezuela</p>
+    <div class="redes">
+        <a href="https://www.facebook.com/prensaserrezuela" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/municipalidadserrezuela?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+        <a href="https://youtube.com/@municipalidaddeserrezuela6326?si=OvU5x1wwMuykrNdB" target="_blank">YouTube</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
