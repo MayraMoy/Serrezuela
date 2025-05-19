@@ -31,9 +31,28 @@ function cerrarModal() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('verMasBtn').addEventListener('click', function () {
-        const ocultos = document.querySelectorAll('#atractivos .card.oculto');
-        ocultos.forEach(card => card.style.display = 'block');
-        this.style.display = 'none'; // Oculta el botón después de mostrar
+    const verMasBtn = document.getElementById('verMasBtn');
+    const verMenosBtn = document.getElementById('verMenosBtn');
+    const ocultos = document.querySelectorAll('#atractivos .card.oculto');
+
+    verMasBtn.addEventListener('click', function () {
+        ocultos.forEach(card => {
+            card.style.display = 'block';
+        });
+        verMasBtn.style.display = 'none';
+        verMenosBtn.style.display = 'inline-block';
+    });
+
+    verMenosBtn.addEventListener('click', function () {
+        ocultos.forEach(card => {
+            card.style.display = 'none';
+        });
+        verMenosBtn.style.display = 'none';
+        verMasBtn.style.display = 'inline-block';
+    });
+
+    // Inicialmente ocultar las tarjetas .oculto por si no tienen display:none en CSS
+    ocultos.forEach(card => {
+        card.style.display = 'none';
     });
 });
