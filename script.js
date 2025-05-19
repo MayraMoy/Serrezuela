@@ -30,15 +30,10 @@ function cerrarModal() {
     document.getElementById("modal").style.display = "none";
 }
 
-function mostrarTexto() {
-    document.getElementById("texto-completo").style.display = "block";
-    document.getElementById("boton-leer").style.display = "none";
-}
-
-const btn = document.getElementById('toggleBtn');
-const contenido = document.getElementById('contenidoExtra');
-
-btn.addEventListener('click', () => {
-    contenido.classList.toggle('expandido');
-    btn.textContent = contenido.classList.contains('expandido') ? 'Leer menos' : 'Leer más';
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('verMasBtn').addEventListener('click', function () {
+        const ocultos = document.querySelectorAll('#atractivos .card.oculto');
+        ocultos.forEach(card => card.style.display = 'block');
+        this.style.display = 'none'; // Oculta el botón después de mostrar
+    });
 });
