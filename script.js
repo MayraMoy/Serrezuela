@@ -1,4 +1,4 @@
-
+// Imagenes 
 const hero = document.getElementById('hero');
 const images = [
     'img/serrezuela1.webp',
@@ -8,6 +8,7 @@ const images = [
 
 let index = 0;
 
+// Cambiar la imagen de fondo
 function changeBackground() {
     hero.style.backgroundImage = `url('${images[index]}')`;
     index = (index + 1) % images.length;
@@ -19,6 +20,7 @@ setInterval(changeBackground, 5000);
   // Mostrar la primera imagen al cargar
 changeBackground();
 
+// Mostrar la imagen ampliada
 function mostrarModal(img) {
     const modal = document.getElementById("modal");
     const imgAmpliada = document.getElementById("img-ampliada");
@@ -26,10 +28,12 @@ function mostrarModal(img) {
     modal.style.display = "flex";
 }
 
+// Cerrar el modal
 function cerrarModal() {
     document.getElementById("modal").style.display = "none";
 }
 
+// Mostrar mas o menos fotos
 document.addEventListener('DOMContentLoaded', function () {
     const verMasBtn = document.getElementById('verMasBtn');
     const verMenosBtn = document.getElementById('verMenosBtn');
